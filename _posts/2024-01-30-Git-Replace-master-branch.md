@@ -12,7 +12,7 @@ tags: [Git]
 하지만, 오랫동안 관리되지 않아 병합하는 데 여러 문제가 있었어요. 
 고민 끝에, 최신 브랜치로 `master(main)` 브랜치를 간단하게 덮어쓰는 방법을 찾아서 공유드립니다.
 
-```mermaid
+@startmermaid
 gitGraph
     commit
     branch develop
@@ -38,7 +38,7 @@ gitGraph
     merge main id:"strategy=ours"
     checkout main
     merge develop id:"no fast forward"
-```
+@endmermaid
 
 ## master(main) 브랜치 업데이트 방법
 
