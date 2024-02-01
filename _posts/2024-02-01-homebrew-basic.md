@@ -2,7 +2,7 @@
 title: MacOS 패키지관리도구 Homebrew 설치 및 사용법
 date: 2024-02-01 13:44:00 +09:00
 categories: [S/W]
-tags: [Git, Windows, Mac, Linux]
+tags: [Mac]
 ---
 
 ## Homebrew 란?
