@@ -42,9 +42,7 @@ Homebrew의 명령어는 `brew`입니다. 설치가 완료되면 `brew --version
 
 ```sh
 $ brew --version
-Homebrew 2.2.3
-Homebrew/homebrew-core (git revision 9144; last commit 2020-01-31)
-Homebrew/homebrew-cask (git revision 200ce; last commit 2020-01-31)
+Homebrew 4.2.5
 ```
 
 ### Homebrew 업데이트하기
@@ -70,16 +68,13 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 Homebrew에서 패키지를 설치하고자 하면 해당 패키지가 Homebrew에 있는지 먼저 확인해야 합니다. Homebrew에서는 `brew search` 명령을 통해 패키지를 검색할 수 있습니다.
 
 ```sh
-$ brew search git
-brew search git
+$ brew search vim
 ==> Formulae
-...
-git ✔                   git-fresh               git-quick-stats
-...
+avimetaedit     neovim ✔        neovim-remote   pacvim          vim             vimpc           vifm            vit             vis             nim
+macvim          neovim-qt       nvimpager       pyvim           vimpager        zsh-vi-mode     viu             vip             zim
 
 ==> Casks
-adobe-digital-editions  gitblade                gitfox
-...
+fvim              goneovim          kindavim          macvim            via               vimcal            vimediamanager    vimr              vym
 ```
 
 일반 커맨드라인 패키지인 `Formulae`와 GUI 애플리케이션인 `Casks`로 구분되어 검색 결과가 출력됩니다.
@@ -91,33 +86,25 @@ adobe-digital-editions  gitblade                gitfox
 패키지를 설치하기 전에 해당 패키지의 정보를 먼저 확인하는 것이 좋습니다. Homebrew에서는 `brew info` 명령을 통해 패키지의 정보를 확인할 수 있습니다.
 
 ```sh
-$ brew info git
-git: stable 2.25.0 (bottled), HEAD
-Distributed revision control system
-https://git-scm.com
-/usr/local/Cellar/git/2.24.0_2 (1,547 files, 45.1MB) *
-  Poured from bottle on 2019-11-24 at 16:23:21
-From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/git.rb
+$ brew info vim
+==> vim: stable 9.1.0050 (bottled), HEAD
+Vi 'workalike' with many additional features
+https://www.vim.org/
+Conflicts with:
+  ex-vi (because vim and ex-vi both install bin/ex and bin/view)
+  macvim (because vim and macvim both install vi* binaries)
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/v/vim.rb
+License: Vim
 ==> Dependencies
-Required: gettext ✔, pcre2 ✔
+Required: gettext ✔, libsodium ✘, lua ✘, ncurses ✘, perl ✘, python@3.12 ✘, ruby ✘
 ==> Options
 --HEAD
         Install HEAD version
-==> Caveats
-The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
-
-Bash completion has been installed to:
-  /usr/local/etc/bash_completion.d
-
-zsh completions and functions have been installed to:
-  /usr/local/share/zsh/site-functions
-
-Emacs Lisp files have been installed to:
-  /usr/local/share/emacs/site-lisp/git
 ==> Analytics
-install: 212,700 (30 days), 650,920 (90 days), 1,899,186 (365 days)
-install-on-request: 200,062 (30 days), 608,892 (90 days), 1,771,204 (365 days)
-build-error: 0 (30 days)
+install: 35,094 (30 days), 88,183 (90 days), 292,729 (365 days)
+install-on-request: 33,388 (30 days), 85,291 (90 days), 287,809 (365 days)
+build-error: 11 (30 days)
 ```
 
 ### Homebrew 패키지 설치하기
@@ -131,16 +118,29 @@ $ brew install <PACKAGE_NAME>
 설치가 완료되면 `brew list` 명령을 통해 설치된 패키지를 확인할 수 있습니다.
 
 ```sh
-$ brew list git
-/usr/local/Cellar/git/2.25.0_1/.bottle/etc/gitconfig
-/usr/local/Cellar/git/2.25.0_1/bin/git
-/usr/local/Cellar/git/2.25.0_1/bin/git-cvsserver
-/usr/local/Cellar/git/2.25.0_1/bin/git-receive-pack
-/usr/local/Cellar/git/2.25.0_1/bin/git-shell
-/usr/local/Cellar/git/2.25.0_1/bin/git-upload-archive
-/usr/local/Cellar/git/2.25.0_1/bin/git-upload-pack
-/usr/local/Cellar/git/2.25.0_1/etc/bash_completion.d/ (2 files)
-...
+$ brew list pyenv
+/opt/homebrew/Cellar/pyenv/2.3.24/bin/pyenv
+/opt/homebrew/Cellar/pyenv/2.3.24/bin/pyenv-install
+/opt/homebrew/Cellar/pyenv/2.3.24/bin/pyenv-uninstall
+/opt/homebrew/Cellar/pyenv/2.3.24/bin/python-build
+/opt/homebrew/Cellar/pyenv/2.3.24/COMMANDS.md
+/opt/homebrew/Cellar/pyenv/2.3.24/completions/ (3 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/CONDUCT.md
+/opt/homebrew/Cellar/pyenv/2.3.24/CONTRIBUTING.md
+/opt/homebrew/Cellar/pyenv/2.3.24/Dockerfile
+/opt/homebrew/Cellar/pyenv/2.3.24/libexec/ (27 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/MAINTENANCE.md
+/opt/homebrew/Cellar/pyenv/2.3.24/Makefile
+/opt/homebrew/Cellar/pyenv/2.3.24/plugins/python-build/ (1012 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/plugins/.gitignore
+/opt/homebrew/Cellar/pyenv/2.3.24/pyenv.d/exec/ (4 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/pyenv.d/install/latest.bash
+/opt/homebrew/Cellar/pyenv/2.3.24/pyenv.d/rehash/ (6 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/share/man/man1/pyenv.1
+/opt/homebrew/Cellar/pyenv/2.3.24/src/ (7 files)
+/opt/homebrew/Cellar/pyenv/2.3.24/terminal_output.png
+/opt/homebrew/Cellar/pyenv/2.3.24/test/libexec/pyenv-echo
+/opt/homebrew/Cellar/pyenv/2.3.24/test/ (27 files)
 ```
 
 ### Homebrew 패키지 업데이트하기
