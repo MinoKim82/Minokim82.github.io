@@ -2,7 +2,7 @@
 title: Docker에서 Proxy 설정하기
 date: 2024-01-29 09:50:00 +09:00
 categories: [S/W]
-tags: [linux, docker]
+tags: [Linux, Docker]
 ---
 
 안녕하세요,  Docker 사용자들이 자주 마주치는 문제 중 하나인 'Proxy 설정'에 대해 알아보겠습니다. 특히 회사나 기관에서 인터넷 접속 시 Proxy를 거치는 경우, Docker도 이 Proxy 설정을 통해 외부 네트워크와 소통해야 합니다. 이 글을 통해 Docker에서 Proxy 설정하는 방법과 프록시를 설정하지 않았을 때 발생할 수 있는 에러 케이스를 단계별로 쉽게 설명드리겠습니다.
