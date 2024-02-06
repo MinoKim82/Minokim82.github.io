@@ -2,7 +2,7 @@
 title: Docker에서 Data Root 폴더 변경하기
 date: 2024-01-29 09:18:00 +09:00
 categories: [S/W]
-tags: [linux, docker]
+tags: [Linux, Docker]
 ---
 
 안녕하세요. 오늘은 Docker를 사용하시는 분들께 특히 도움이 될 주제, 바로 'Docker에서 **Data Root** 폴더를 변경하는 방법'에 대해 알아보겠습니다. Docker를 사용하다 보면 기본 설정된 Data Root 폴더의 용량이 부족하거나 다른 드라이브에 데이터를 저장하고 싶을 때가 있습니다. 이럴 때 **Data Root** 폴더의 위치를 변경하는 방법을 알고 있으면 큰 도움이 됩니다.
