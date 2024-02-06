@@ -2,7 +2,7 @@
 title: 우분투에 도커 설치하기
 date: 2024-01-28 10:20:00 +09:00
 categories: [S/W]
-tags: [linux, docker, 셀프호스팅]
+tags: [Linux, Docker, 셀프호스팅]
 ---
 
 ## 준비사항
