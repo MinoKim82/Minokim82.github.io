@@ -1,5 +1,5 @@
 ---
-titile: Git에서 gitignore가 정상적으로 작동하지 않을 때 해결 방법
+title: Git에서 gitignore가 정상적으로 작동하지 않을 때 해결 방법
 date: 2024-02-07 11:19:00 +09:00
 categories: [S/W]
 tags: [Git]
