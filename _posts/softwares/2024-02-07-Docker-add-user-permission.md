@@ -2,7 +2,7 @@
 title: Docker 사용 중 "Permission Denied" 오류 해결하기
 date: 2024-02-07 12:30:00 +09:00
 categories: [S/W]
-tage: [Docker, Linux]
+tags: [Docker, Linux]
 ---
 
 Docker 사용 시 docker 명령어의 권한을 root 사용자만 소유하고 있기 때문에, 
