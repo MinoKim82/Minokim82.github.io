@@ -2,7 +2,7 @@
 title: pyenv를 활용한 Python 개발 환경 구성 완벽 가이드
 date: 2024-02-13 17:10:00 +09:00
 categories: [S/W]
-tags: [Linux, Mac, pyenv, python]
+tags: [Linux, Mac, Pyenv, Python]
 ---
 
 Python은 그 자체로도 강력하지만, 그 힘은 다양한 라이브러리와 프레임워크에서 비롯됩니다. 하지만 이러한 강점이 때로는 버전 호환성 문제를 야기할 수 있습니다. 예를 들어, 한 프로젝트는 Python 2를 요구할 수 있으며, 다른 하나는 Python 3.8 이상을 요구할 수 있습니다. 이런 상황에서 개발자가 두 프로젝트를 동시에 유지하려면 어떻게 해야 할까요?
