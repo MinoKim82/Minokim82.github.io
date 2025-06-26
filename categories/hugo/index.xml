@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/hugo/</link>
+    <description>Recent content in Hugo on My New Hugo Site</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 25 Jun 2025 22:46:21 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo 새 글 작성하기</title>
+      <link>http://localhost:1313/posts/hosting/hugo/create-new-post/create-new-post/</link>
+      <pubDate>Wed, 25 Jun 2025 22:46:21 +0900</pubDate>
+      <guid>http://localhost:1313/posts/hosting/hugo/create-new-post/create-new-post/</guid>
+      <description>&lt;p&gt;지난번에는 리눅스와 macOS 환경에 Hugo를 설치하는 과정을 다루었습니다. 성공적으로 Hugo를 설치하셨다면 이제 본격적으로 콘텐츠를 채워나갈 차례입니다.&lt;/p&gt;
+&lt;p&gt;오늘은 Hugo 사이트에 새로운 글을 추가하는 가장 대표적인 두 가지 방법에 대해 알아보겠습니다. 바로 Hugo의 기본 명령어인 &lt;code&gt;hugo new&lt;/code&gt;를 사용하는 방법과, 이미 작성된 마크다운(.md) 파일을 직접 가져와 추가하는 방법입니다.&lt;/p&gt;
+&lt;p&gt;각 방법의 장단점과 사용법을 명확히 이해하면 콘텐츠를 훨씬 효율적으로 관리할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;hugo-new&#34;&gt;&lt;strong&gt;&lt;code&gt;hugo new&lt;/code&gt; 명령어 사용하기&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;hugo new&lt;/code&gt;는 Hugo에서 새 콘텐츠를 생성하는 공식적이고 가장 권장되는 방법입니다. 이 명령어를 사용하면 단순한 파일 생성을 넘어, 미리 설정된 양식(Archetype)에 따라 글의 기본 구조를 자동으로 만들어주기 때문입니다.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

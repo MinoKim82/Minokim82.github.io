@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판)
+우리가 매일 사용하는 스마트폰은 강력한 AP와 충분한 메모리를 갖춘 훌륭한 개발 및 서버 관리 도구가 될 수 있습니다. 그 중심에는 Termux라는 강력한 터미널 앱이 있습니다.
+이번 글에서는 Termux를 &lsquo;올바르게&rsquo; 설치하고 개발에 필요한 기본 환경을 설정하는 방법을 2025년 최신 정보 기준으로 다시 한번 알려드립니다.
+Play 스토어 vs F-Droid
+많은 분들이 습관적으로 구글 플레이 스토어에서 앱을 검색하고 설치합니다. 하지만 Termux의 경우, 이것이 가장 큰 실수를 유발하는 지점입니다.">
+    <meta name="generator" content="Hugo 0.147.9">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/develop/env/termux-setup-on-android/termux-setup-on-android/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/develop/env/termux-setup-on-android/termux-setup-on-android/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="My New Hugo Site">
+  <meta property="og:description" content="안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판) 우리가 매일 사용하는 스마트폰은 강력한 AP와 충분한 메모리를 갖춘 훌륭한 개발 및 서버 관리 도구가 될 수 있습니다. 그 중심에는 Termux라는 강력한 터미널 앱이 있습니다. 이번 글에서는 Termux를 ‘올바르게’ 설치하고 개발에 필요한 기본 환경을 설정하는 방법을 2025년 최신 정보 기준으로 다시 한번 알려드립니다.
+Play 스토어 vs F-Droid 많은 분들이 습관적으로 구글 플레이 스토어에서 앱을 검색하고 설치합니다. 하지만 Termux의 경우, 이것이 가장 큰 실수를 유발하는 지점입니다.">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta itemprop="name" content="My New Hugo Site">
+  <meta itemprop="description" content="안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판) 우리가 매일 사용하는 스마트폰은 강력한 AP와 충분한 메모리를 갖춘 훌륭한 개발 및 서버 관리 도구가 될 수 있습니다. 그 중심에는 Termux라는 강력한 터미널 앱이 있습니다. 이번 글에서는 Termux를 ‘올바르게’ 설치하고 개발에 필요한 기본 환경을 설정하는 방법을 2025년 최신 정보 기준으로 다시 한번 알려드립니다.
+Play 스토어 vs F-Droid 많은 분들이 습관적으로 구글 플레이 스토어에서 앱을 검색하고 설치합니다. 하지만 Termux의 경우, 이것이 가장 큰 실수를 유발하는 지점입니다.">
+  <meta itemprop="wordCount" content="525">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My New Hugo Site">
+  <meta name="twitter:description" content="안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판) 우리가 매일 사용하는 스마트폰은 강력한 AP와 충분한 메모리를 갖춘 훌륭한 개발 및 서버 관리 도구가 될 수 있습니다. 그 중심에는 Termux라는 강력한 터미널 앱이 있습니다. 이번 글에서는 Termux를 ‘올바르게’ 설치하고 개발에 필요한 기본 환경을 설정하는 방법을 2025년 최신 정보 기준으로 다시 한번 알려드립니다.
+Play 스토어 vs F-Droid 많은 분들이 습관적으로 구글 플레이 스토어에서 앱을 검색하고 설치합니다. 하지만 Termux의 경우, 이것이 가장 큰 실수를 유발하는 지점입니다.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="안드로이드-리눅스-머신으로-변신시키기-termux-설치와-기본-설정-가이드-2025년-최신판">안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판)</h1>
+<p>우리가 매일 사용하는 스마트폰은 강력한 AP와 충분한 메모리를 갖춘 훌륭한 개발 및 서버 관리 도구가 될 수 있습니다. 그 중심에는 <strong>Termux</strong>라는 강력한 터미널 앱이 있습니다.
+이번 글에서는 Termux를 &lsquo;올바르게&rsquo; 설치하고 개발에 필요한 기본 환경을 설정하는 방법을 2025년 최신 정보 기준으로 다시 한번 알려드립니다.</p>
+<h2 id="play-스토어-vs-f-droid"><strong>Play 스토어 vs F-Droid</strong></h2>
+<p>많은 분들이 습관적으로 구글 플레이 스토어에서 앱을 검색하고 설치합니다. <strong>하지만 Termux의 경우, 이것이 가장 큰 실수를 유발하는 지점입니다.</strong></p>
+<p>결론부터 말씀드리겠습니다. <strong>2025년 현재, 구글 플레이 스토어에 등록된 Termux는 여전히 업데이트가 중단된 deprecated(사용 중단) 버전입니다.</strong></p>
+<p>사용자분께서 Play 스토어에서 업데이트가 된다고 보셨다면, 이는 Termux의 플러그인(Add-on)이거나, 유사한 이름의 다른 앱일 가능성이 높습니다. 공식 <code>com.termux</code> 앱 패키지는 다음과 같은 이유로 Play 스토어에서 사용해서는 안 됩니다.</p>
+<ol>
+<li><strong>업데이트 중단</strong>: 2020년 9월 이후로 메인 앱의 업데이트가 없습니다.</li>
+<li><strong>보안 취약점</strong>: 5년 가까이 업데이트되지 않은 패키지는 수많은 보안 취약점을 내포하고 있습니다.</li>
+<li><strong>저장소(Repository) 문제</strong>: 패키지를 다운로드하는 서버 주소가 변경되어 <code>pkg update</code> 같은 핵심 명령어가 정상적으로 동작하지 않습니다.</li>
+</ol>
+<p>Termux 개발팀은 이러한 문제 때문에 공식적으로 <strong>F-Droid 또는 GitHub</strong>를 통한 설치를 권장하고 있습니다.</p>
+<p>따라서, Termux의 모든 기능을 안전하고 정상적으로 사용하려면 <strong>반드시 F-Droid 또는 GitHub에서 직접 설치</strong>해야 합니다. 이 점을 다시 한번 강조합니다.</p>
+<h2 id="termux-설치하기"><strong>Termux 설치하기</strong></h2>
+<p>F-Droid는 안드로이드용 자유-오픈 소스 소프트웨어(FOSS)를 제공하는 신뢰할 수 있는 저장소입니다.</p>
+<p><strong>F-Droid 웹사이트 방문</strong>
+아래 링크를 통해 F-Droid의 Termux 페이지로 이동합니다.
+<a href="https://f-droid.org/packages/com.termux/">https://f-droid.org/packages/com.termux/</a></p>
+<p><strong>APK 파일 다운로드</strong>
+페이지를 아래로 스크롤하여 &lsquo;Versions&rsquo; 섹션을 찾고, 가장 최신 버전의 &lsquo;Download APK&rsquo; 버튼을 눌러 설치 파일을 다운로드합니다.</p>
+<p>![[termux-setup-on-android_download-termux.webp]]
+<strong>설치 진행</strong>
+다운로드한 APK 파일을 실행하여 설치합니다. &lsquo;알 수 없는 출처의 앱 설치&rsquo; 권한이 필요할 수 있습니다. 안드로이드 시스템의 안내에 따라 권한을 허용하고 설치를 완료합니다.</p>
+<h2 id="termux-초기-설정"><strong>Termux 초기 설정</strong></h2>
+<p>설치를 완료하고 앱을 실행하면, 검은 화면에 커서가 깜빡이는 익숙한 터미널 환경을 마주하게 됩니다. 가장 먼저 패키지들을 최신 상태로 만들어야 합니다.</p>
+<p>아래 명령어를 입력하세요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg update <span style="color:#f92672">&amp;&amp;</span> pkg upgrade
+</span></span></code></pre></div><ul>
+<li><code>pkg</code>: Termux에서 사용하는 패키지 관리자입니다. Debian 계열 리눅스의 <code>apt</code>와 유사한 역할을 합니다.</li>
+<li><code>update</code>: 설치 가능한 패키지 목록을 최신 정보로 갱신합니다.</li>
+<li><code>upgrade</code>: 현재 설치된 패키지들을 최신 버전으로 업그레이드합니다.</li>
+</ul>
+<p>중간에 몇 가지 질문이 나올 수 있는데, 기본값(Y 또는 N)을 선택하여 엔터를 누르면 무난하게 진행됩니다.</p>
+<p>![[termux-setup-on-android_install-termux.webp]]</p>
+<h2 id="필수-도구-설치하기"><strong>필수 도구 설치하기</strong></h2>
+<p>이제 개발에 필요한 핵심 도구들을 설치해 보겠습니다.</p>
+<h3 id="저장소-접근-설정"><strong>저장소 접근 설정</strong></h3>
+<p>Termux가 스마트폰의 파일 시스템(다운로드, 사진 폴더 등)에 접근하려면 권한 설정이 필요합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>termux-setup-storage
+</span></span></code></pre></div><p>위 명령어를 실행하면 저장 공간 접근 권한을 요청하는 팝업이 나타납니다. <strong>&lsquo;허용&rsquo;</strong> 을 선택하세요.</p>
+<p>이제 홈 디렉터리(<code>~</code>)에 <code>storage</code>라는 이름의 심볼릭 링크(바로가기)가 생성됩니다. 이 폴더를 통해 스마트폰 내부 저장소에 접근할 수 있습니다.</p>
+<h3 id="텍스트-에디터-nano"><strong>텍스트 에디터 (nano)</strong></h3>
+<p>간단한 스크립트나 설정 파일을 수정하려면 텍스트 에디터가 필요합니다. <code>nano</code>는 사용법이 직관적이라 초심자에게 적합합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg install nano
+</span></span></code></pre></div><h3 id="ssh-클라이언트-openssh"><strong>SSH 클라이언트 (openssh)</strong></h3>
+<p>원격 서버에 접속하여 작업하는 것은 개발자의 기본 업무 중 하나입니다. <code>openssh</code>를 설치하여 SSH 클라이언트를 사용할 수 있습니다.</p>
+<pre tabindex="0"><code>pkg install openssh
+</code></pre><p>아래 명령을 통해서 ssh key를 생성합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh keygen
+</span></span></code></pre></div><p><code>~/.ssh</code> 폴더 내부에, <code>id_ed25519 </code>,  <code>id_ed25519.pub </code> 파일이 정상적으로 생성완료 되면, ssh 접속을 사용할 수 있습니다.</p>
+<h3 id="버전-관리-시스템-git"><strong>버전 관리 시스템 (git)</strong></h3>
+<p>소스 코드 관리를 위해 Git은 필수입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg install git
+</span></span></code></pre></div><h3 id="프로그래밍-언어-python"><strong>프로그래밍 언어 (Python)</strong></h3>
+<p>다양한 자동화 스크립트 및 개발에 널리 사용되는 Python을 설치해 보겠습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg install python
+</span></span></code></pre></div><h2 id="마치며"><strong>마치며</strong></h2>
+<p><strong>정확한 정보를 바탕으로 올바른 도구를 사용하는 것이 안전하고 효율적인 개발의 첫걸음입니다.</strong> F-Droid를 통해 최신 버전의 Termux를 설치하여, 안전하고 강력한 휴대용 개발 환경을 구축하시길 바랍니다.</p>
+<p>이제 여러분의 안드로이드 기기는 언제 어디서든 사용할 수 있는 훌륭한 보조 개발 머신이 되었습니다.</p>
+<hr>
+<p><strong>참조</strong></p>
+<ul>
+<li><strong>Termux 공식 웹사이트:</strong> <a href="https://termux.dev/en/">https://termux.dev/en/</a></li>
+<li><strong>Termux F-Droid 페이지:</strong> <a href="https://f-droid.org/packages/com.termux/">https://f-droid.org/packages/com.termux/</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Android Termux에서 Hugo 블로그 만들기 | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="코딩과 글쓰기를 좋아하시는 분들이라면, PC 앞에 앉아야만 작업할 수 있다는 점이 때로는 번거롭게 느껴지셨을 겁니다. 만약 스마트폰만으로 언제 어디서든 블로그 글을 작성하고, 빌드하고, 테스트까지 할 수 있다면 어떨까요?
+이 가이드에서는 여러분의 스마트폰을 강력한 개발 환경으로 만들어주는 Termux와, 빠르고 유연한 정적 사이트 생성기 Hugo를 이용해 나만의 블로그를 만드는 방법을 알아봅니다.
+시작하기 전에: Termux 설치 확인
+본격적인 시작에 앞서, 가장 핵심적인 준비물인 Termux 앱이 스마트폰에 설치되어 있어야 합니다.
+
+✅ 아직 Termux를 설치하지 않으셨나요?">
+    <meta name="generator" content="Hugo 0.147.9">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/hosting/hugo/make-hugo-blog-on-android-termux/make-hugo-blog-on-android-termux/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/hosting/hugo/make-hugo-blog-on-android-termux/make-hugo-blog-on-android-termux/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Android Termux에서 Hugo 블로그 만들기">
+  <meta property="og:description" content="코딩과 글쓰기를 좋아하시는 분들이라면, PC 앞에 앉아야만 작업할 수 있다는 점이 때로는 번거롭게 느껴지셨을 겁니다. 만약 스마트폰만으로 언제 어디서든 블로그 글을 작성하고, 빌드하고, 테스트까지 할 수 있다면 어떨까요?
+이 가이드에서는 여러분의 스마트폰을 강력한 개발 환경으로 만들어주는 Termux와, 빠르고 유연한 정적 사이트 생성기 Hugo를 이용해 나만의 블로그를 만드는 방법을 알아봅니다.
+시작하기 전에: Termux 설치 확인 본격적인 시작에 앞서, 가장 핵심적인 준비물인 Termux 앱이 스마트폰에 설치되어 있어야 합니다.
+✅ 아직 Termux를 설치하지 않으셨나요?">
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-25T22:46:21+09:00">
+    <meta property="article:modified_time" content="2025-06-25T22:46:21+09:00">
+    <meta property="article:tag" content="블로그">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Termux">
+
+  <meta itemprop="name" content="Android Termux에서 Hugo 블로그 만들기">
+  <meta itemprop="description" content="코딩과 글쓰기를 좋아하시는 분들이라면, PC 앞에 앉아야만 작업할 수 있다는 점이 때로는 번거롭게 느껴지셨을 겁니다. 만약 스마트폰만으로 언제 어디서든 블로그 글을 작성하고, 빌드하고, 테스트까지 할 수 있다면 어떨까요?
+이 가이드에서는 여러분의 스마트폰을 강력한 개발 환경으로 만들어주는 Termux와, 빠르고 유연한 정적 사이트 생성기 Hugo를 이용해 나만의 블로그를 만드는 방법을 알아봅니다.
+시작하기 전에: Termux 설치 확인 본격적인 시작에 앞서, 가장 핵심적인 준비물인 Termux 앱이 스마트폰에 설치되어 있어야 합니다.
+✅ 아직 Termux를 설치하지 않으셨나요?">
+  <meta itemprop="datePublished" content="2025-06-25T22:46:21+09:00">
+  <meta itemprop="dateModified" content="2025-06-25T22:46:21+09:00">
+  <meta itemprop="wordCount" content="546">
+  <meta itemprop="keywords" content="hugo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Android Termux에서 Hugo 블로그 만들기">
+  <meta name="twitter:description" content="코딩과 글쓰기를 좋아하시는 분들이라면, PC 앞에 앉아야만 작업할 수 있다는 점이 때로는 번거롭게 느껴지셨을 겁니다. 만약 스마트폰만으로 언제 어디서든 블로그 글을 작성하고, 빌드하고, 테스트까지 할 수 있다면 어떨까요?
+이 가이드에서는 여러분의 스마트폰을 강력한 개발 환경으로 만들어주는 Termux와, 빠르고 유연한 정적 사이트 생성기 Hugo를 이용해 나만의 블로그를 만드는 방법을 알아봅니다.
+시작하기 전에: Termux 설치 확인 본격적인 시작에 앞서, 가장 핵심적인 준비물인 Termux 앱이 스마트폰에 설치되어 있어야 합니다.
+✅ 아직 Termux를 설치하지 않으셨나요?">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Android Termux에서 Hugo 블로그 만들기</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-06-25T22:46:21+09:00">June 25, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>코딩과 글쓰기를 좋아하시는 분들이라면, PC 앞에 앉아야만 작업할 수 있다는 점이 때로는 번거롭게 느껴지셨을 겁니다. 만약 스마트폰만으로 언제 어디서든 블로그 글을 작성하고, 빌드하고, 테스트까지 할 수 있다면 어떨까요?</p>
+<p>이 가이드에서는 여러분의 스마트폰을 강력한 개발 환경으로 만들어주는 <strong>Termux</strong>와, 빠르고 유연한 정적 사이트 생성기 <strong>Hugo</strong>를 이용해 나만의 블로그를 만드는 방법을 알아봅니다.</p>
+<h2 id="시작하기-전에-termux-설치-확인">시작하기 전에: Termux 설치 확인</h2>
+<p>본격적인 시작에 앞서, 가장 핵심적인 준비물인 <strong>Termux 앱이 스마트폰에 설치되어 있어야 합니다.</strong></p>
+<blockquote>
+<p><strong>✅ 아직 Termux를 설치하지 않으셨나요?</strong></p>
+<p>괜찮습니다. Termux의 설치부터 기본 설정까지 자세히 다룬 제 이전 글이 있습니다. 아래 링크의 글을 먼저 따라 설치를 완료하신 후, 다시 이 글로 돌아와 다음 단계를 진행해 주세요.</p>
+<p><strong>[➡️ 참조: 안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판) (링크)]</strong></p></blockquote>
+<p>Termux가 준비되셨다면, 이제 Hugo 블로그를 만들 준비가 거의 끝났습니다.</p>
+<h2 id="termux-환경-준비-및-업데이트">Termux 환경 준비 및 업데이트</h2>
+<p>가장 먼저, 기존에 설치된 Termux의 패키지를 최신 상태로 만들어 개발 환경을 깔끔하게 준비하겠습니다. 오래된 패키지와의 충돌을 방지하는 중요한 과정입니다.</p>
+<p>Termux를 실행하고 아래 명령어를 입력하세요. 패키지 목록을 갱신하고 설치된 패키지를 최신 버전으로 업그레이드합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg update <span style="color:#f92672">&amp;&amp;</span> pkg upgrade
+</span></span></code></pre></div><p>중간에 <code>Do you want to continue? [Y/n]</code> 와 같은 질문이 나오면 <code>Y</code>를 누르고 엔터를 입력하면 됩니다. 이 과정이 오류 없이 완료되었다면, 다음 단계로 넘어갈 준비가 된 것입니다.</p>
+<hr>
+<h2 id="hugo와-git-설치하기">Hugo와 Git 설치하기</h2>
+<p>블로그를 만들기 위해 필요한 핵심 도구들을 설치할 차례입니다.</p>
+<ul>
+<li><strong>Hugo</strong>: Go 언어로 만들어진 매우 빠른 정적 사이트 생성기(Static Site Generator, SSG)입니다.</li>
+<li><strong>Git</strong>: 버전 관리 시스템입니다. Hugo 테마를 다운로드하거나, 나중에 블로그 코드를 GitHub 등에 백업할 때 필수적입니다.</li>
+</ul>
+<p>아래 명령어로 두 패키지를 한 번에 설치합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pkg install hugo git
+</span></span></code></pre></div><p>설치가 잘 되었는지 확인해볼까요? 아래 명령어를 각각 입력하여 버전 정보가 나오면 성공입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span>git version
+</span></span></code></pre></div><p><img src="make-hugo-blog-on-android-termux_check-version.webp" alt=""></p>
+<hr>
+<h2 id="hugo-블로그-사이트-생성">Hugo 블로그 사이트 생성</h2>
+<p>이제 본격적으로 블로그의 뼈대를 만들어 보겠습니다.</p>
+<p><strong>새 사이트 생성</strong>
+<code>hugo new site</code> 명령어 뒤에 원하는 폴더 이름을 지정합니다. 여기서는 <code>my-blog</code>라는 이름으로 만들겠습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-blog
+</span></span></code></pre></div><p><strong>생성된 폴더로 이동</strong>
+<code>cd</code> 명령어를 사용해 방금 만든 <code>my-blog</code> 폴더 안으로 들어갑니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd my-blog
+</span></span></code></pre></div><h2 id="테마-설치-및-적용">테마 설치 및 적용</h2>
+<p>디자인 <strong>테마</strong>를 적용하여 블로그에 옷을 입혀야 합니다. 인기 있는 <code>ananke</code> 테마를 예시로 설치해 보겠습니다.</p>
+<p><strong>Git으로 테마 추가</strong>
+Git의 <code>submodule</code> 기능을 이용해 테마를 추가합니다.</p>
+<pre tabindex="0"><code>git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</code></pre><p><strong>설정 파일에 테마 적용</strong>
+<code>nano hugo.toml</code> 명령어로 설정 파일을 열고, 아래 내용을 참고하여 수정하거나 추가합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://example.org/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;ko-kr&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;나의 첫 Hugo 블로그&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#39;ananke&#39;</span>
+</span></span></code></pre></div><p>수정이 끝났으면 <code>Ctrl + X</code>, <code>Y</code>, <code>Enter</code> 순서로 눌러 저장하고 빠져나옵니다.</p>
+<h2 id="첫-번째-글-작성하기">첫 번째 글 작성하기</h2>
+<p><code>hugo new content</code> 명령어로 첫 글의 파일을 생성합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new content posts/my-first-post.md
+</span></span></code></pre></div><p><code>nano content/posts/my-first-post.md</code> 명령어로 파일을 열고, <strong><code>draft: true</code>를 <code>draft: false</code>로 변경</strong>한 후 내용을 작성하세요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My First Post&#34;
+</span></span><span style="display:flex;"><span>date: 2025-06-25T09:25:37+09:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 안녕하세요!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>여기는 제 첫 번째 Hugo 블로그 글입니다.
+</span></span><span style="display:flex;"><span>**Termux**와 **Hugo**를 사용해서 만들었죠.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 정말 간편합니다.
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 어디서든 작업할 수 있습니다.
+</span></span></code></pre></div><h2 id="로컬-서버-실행-및-확인">로컬 서버 실행 및 확인</h2>
+<p>모든 준비가 끝났습니다. Hugo에 내장된 개발용 웹 서버를 실행하여 결과를 확인해 보겠습니다.</p>
+<p><code>my-blog</code> 폴더 안에서 아래 명령어를 실행하세요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>서버가 실행되면 <code>Web Server is available at http://localhost:1313/</code> 메시지가 나타납니다. 스마트폰의 웹 브라우저를 열고 주소창에 <code>http://localhost:1313</code>을 입력해 보세요.</p>
+<p><img src="make-hugo-blog-on-android-termux_Run-Blog.webp" alt=""></p>
+<p>여러분이 직접 만든 블로그가 눈앞에 나타날 것입니다.</p>
+<h2 id="다음-단계는">다음 단계는?</h2>
+<p>축하합니다! 이제 여러분은 스마트폰만으로 Hugo 블로그를 만들고 관리할 수 있는 환경을 완벽하게 갖추었습니다.</p>
+<p>다음 목표는 이 블로그를 <strong>GitHub Pages</strong>나 <strong>Netlify</strong> 같은 서비스를 통해 웹에 **배포(Deploy)**하여 전 세계 누구나 접속할 수 있도록 만드는 것입니다. 이 과정은 다음 글에서 자세히 다루도록 하겠습니다.</p>
+<p>이제 여러분의 손안에 강력한 블로깅 도구가 생겼습니다. 언제 어디서든 떠오르는 영감을 놓치지 말고 기록하고, 여러분의 지식과 경험을 세상과 공유해 보세요.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">블로그</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/hugo/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Hugo</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/termux/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Termux</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/hosting/hugo/make-hugo-blog-on-mac-os/make-hugo-blog-on-mac-os/">MacOS에서 Hugo로 나만의 블로그 만들기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/hosting/hugo/make-hugo-blog-on-ubuntu/make-hugo-blog-on-ubuntu/">Ubuntu에서 Hugo로 나만의 블로그 만들기</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/hosting/hugo/create-new-post/create-new-post/">hugo 새 글 작성하기</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

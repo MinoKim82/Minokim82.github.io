@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Hugo에 Hextra 테마 적용하는 가장 쉬운 방법 – My New Hugo Site</title>
+  <meta name="description" content="정적 사이트 생성기(Static Site Generator, SSG)인 휴고(Hugo)는 빠른 속도와 강력한 기능으로 많은 사랑을 받고 있습니다. 특히 마크다운으로 콘텐츠를 작성하고, 다양한 테마를 적용하여 손쉽게 자신만의 블로그나 웹사이트를 만들 수 있다는 점이 큰 매력입니다.
+수많은 휴고 테마 중에서도 Hextra는 깔끔한 디자인과 뛰어난 기능성으로 최근 많은 주목을 받고 있습니다. 오늘은 휴고에 Hextra 테마를 적용하는 가장 간단하고 확실한 방법을 알아보겠습니다.
+Hextra 테마, 왜 좋은 선택일까요? Hextra 테마는 다음과 같은 장점을 가지고 있어 많은 개발자들에게 좋은 평가를 받고 있습니다." /><link rel="canonical" href="http://localhost:1313/blog/hosting/hugo/change-theme-to-hextra/change-theme-to-hextra/" itemprop="url" />
+
+<meta property="og:title" content="Hugo에 Hextra 테마 적용하는 가장 쉬운 방법" />
+<meta property="og:description" content="정적 사이트 생성기(Static Site Generator, SSG)인 휴고(Hugo)는 빠른 속도와 강력한 기능으로 많은 사랑을 받고 있습니다. 특히 마크다운으로 콘텐츠를 작성하고, 다양한 테마를 적용하여 손쉽게 자신만의 블로그나 웹사이트를 만들 수 있다는 점이 큰 매력입니다.
+수많은 휴고 테마 중에서도 Hextra는 깔끔한 디자인과 뛰어난 기능성으로 최근 많은 주목을 받고 있습니다. 오늘은 휴고에 Hextra 테마를 적용하는 가장 간단하고 확실한 방법을 알아보겠습니다.
+Hextra 테마, 왜 좋은 선택일까요?
+    Hextra 테마는 다음과 같은 장점을 가지고 있어 많은 개발자들에게 좋은 평가를 받고 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/hosting/hugo/change-theme-to-hextra/change-theme-to-hextra/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2025-06-26T10:46:43+00:00" />
+<meta property="article:modified_time" content="2025-06-26T10:46:43+00:00" />
+
+  <meta itemprop="name" content="Hugo에 Hextra 테마 적용하는 가장 쉬운 방법">
+  <meta itemprop="description" content="정적 사이트 생성기(Static Site Generator, SSG)인 휴고(Hugo)는 빠른 속도와 강력한 기능으로 많은 사랑을 받고 있습니다. 특히 마크다운으로 콘텐츠를 작성하고, 다양한 테마를 적용하여 손쉽게 자신만의 블로그나 웹사이트를 만들 수 있다는 점이 큰 매력입니다.
+수많은 휴고 테마 중에서도 Hextra는 깔끔한 디자인과 뛰어난 기능성으로 최근 많은 주목을 받고 있습니다. 오늘은 휴고에 Hextra 테마를 적용하는 가장 간단하고 확실한 방법을 알아보겠습니다.
+Hextra 테마, 왜 좋은 선택일까요? Hextra 테마는 다음과 같은 장점을 가지고 있어 많은 개발자들에게 좋은 평가를 받고 있습니다.">
+  <meta itemprop="datePublished" content="2025-06-26T10:46:43+00:00">
+  <meta itemprop="dateModified" content="2025-06-26T10:46:43+00:00">
+  <meta itemprop="wordCount" content="579">
+  <meta itemprop="keywords" content="hugo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo에 Hextra 테마 적용하는 가장 쉬운 방법">
+  <meta name="twitter:description" content="정적 사이트 생성기(Static Site Generator, SSG)인 휴고(Hugo)는 빠른 속도와 강력한 기능으로 많은 사랑을 받고 있습니다. 특히 마크다운으로 콘텐츠를 작성하고, 다양한 테마를 적용하여 손쉽게 자신만의 블로그나 웹사이트를 만들 수 있다는 점이 큰 매력입니다.
+수많은 휴고 테마 중에서도 Hextra는 깔끔한 디자인과 뛰어난 기능성으로 최근 많은 주목을 받고 있습니다. 오늘은 휴고에 Hextra 테마를 적용하는 가장 간단하고 확실한 방법을 알아보겠습니다.
+Hextra 테마, 왜 좋은 선택일까요? Hextra 테마는 다음과 같은 장점을 가지고 있어 많은 개발자들에게 좋은 평가를 받고 있습니다.">
+<link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+
+  
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+  </head>
+<body dir="ltr"><div class="nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+        <img class="hx:mr-2 hx:block hx:dark:hidden" src="/images/logo.svg" alt="Logo" height="20" width="20" />
+        <img class="hx:mr-2 hx:hidden hx:dark:block" src="/images/logo.svg" alt="Dark Logo" height="20" width="20" />
+        <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="My New Hugo Site">My New Hugo Site</span>
+    </a><button type="button" aria-label="Menu" class="hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    <aside class="sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:hidden hx:xl:block">
+  
+  <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+    <div class="search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus:bg-white hx:dark:focus:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+          <li class="open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/"
+    
+  >Blog
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+    href="/blog/hosting/hugo/change-theme-to-hextra/change-theme-to-hextra/"
+    
+  >Hugo에 Hextra 테마 적용하는 가장 쉬운 방법
+    </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#hextra-%ed%85%8c%eb%a7%88-%ec%99%9c-%ec%a2%8b%ec%9d%80-%ec%84%a0%ed%83%9d%ec%9d%bc%ea%b9%8c%ec%9a%94"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Hextra 테마, 왜 좋은 선택일까요?</a>
+            </li>
+          <li>
+              <a
+                href="#hextra-%ed%85%8c%eb%a7%88-%ec%a0%81%ec%9a%a9-%eb%94%b0%eb%9d%bc%ed%95%98%ea%b8%b0"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Hextra 테마 적용 따라하기</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/develop/env/termux-setup-on-android/"
+    
+  >안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판)
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/hosting/hugo/make-hugo-blog-on-android-termux/"
+    
+  >Android Termux에서 Hugo 블로그 만들기
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/hosting/hugo/create-new-post/create-new-post/"
+    
+  >hugo 새 글 작성하기
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/hosting/hugo/make-hugo-blog-on-mac-os/"
+    
+  >MacOS에서 Hugo로 나만의 블로그 만들기
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/hosting/hugo/make-hugo-blog-on-ubuntu/"
+    
+  >Ubuntu에서 Hugo로 나만의 블로그 만들기
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/blog/hosting/hugo/deploy-hugo-on-github-pages-with-actions/deploy-hugo-on-github-pages-with-actions/"
+    
+  >Deploy Hugo on Github Pages With Actions
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="hx:max-xl:hidden hx:h-0 hx:w-64 hx:shrink-0"></div></div>
+  
+  
+    <div class="hx:md:hidden  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle hx:cursor-pointer hx:group hx:h-7 hx:rounded-md hx:px-2 hx:text-left hx:text-xs hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=light]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=dark]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=dark]:hidden">Dark</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-semibold hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#hextra-%ed%85%8c%eb%a7%88-%ec%99%9c-%ec%a2%8b%ec%9d%80-%ec%84%a0%ed%83%9d%ec%9d%bc%ea%b9%8c%ec%9a%94">Hextra 테마, 왜 좋은 선택일까요?
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-semibold hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#hextra-%ed%85%8c%eb%a7%88-%ec%a0%81%ec%9a%a9-%eb%94%b0%eb%9d%bc%ed%95%98%ea%b8%b0">Hextra 테마 적용 따라하기
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1%eb%8b%a8%ea%b3%84-%ec%83%88%eb%a1%9c%ec%9a%b4-%ed%9c%b4%ea%b3%a0-%ec%82%ac%ec%9d%b4%ed%8a%b8-%ec%83%9d%ec%84%b1">1단계: 새로운 휴고 사이트 생성
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2%eb%8b%a8%ea%b3%84-git-%ec%a0%80%ec%9e%a5%ec%86%8c-%ec%b4%88%ea%b8%b0%ed%99%94">2단계: Git 저장소 초기화
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3%eb%8b%a8%ea%b3%84-%ed%9c%b4%ea%b3%a0-%eb%aa%a8%eb%93%88-%ec%b4%88%ea%b8%b0%ed%99%94-%eb%b0%8f-%ed%85%8c%eb%a7%88-%ec%b6%94%ea%b0%80">3단계: 휴고 모듈 초기화 및 테마 추가
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4%eb%8b%a8%ea%b3%84">4단계: hugo.toml 파일 설정
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#5%eb%8b%a8%ea%b3%84-%eb%a1%9c%ec%bb%ac-%ec%84%9c%eb%b2%84-%ec%8b%a4%ed%96%89-%eb%b0%8f-%ed%99%95%ec%9d%b8">5단계: 로컬 서버 실행 및 확인
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0-troubleshooting">3. 문제 해결 (Troubleshooting)
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        
+  <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/blog/">Blog</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Hugo에 Hextra 테마 적용하는 가장 쉬운 방법</div>
+  </div>
+
+        <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Hugo에 Hextra 테마 적용하는 가장 쉬운 방법</h1>
+        <div class="hx:mt-4 hx:mb-16 hx:text-gray-500 hx:text-sm hx:flex hx:items-center hx:flex-wrap hx:gap-y-2"><span class="hx:mr-1">June 26, 2025</span></div>
+        <div class="content">
+          <p>정적 사이트 생성기(Static Site Generator, SSG)인 휴고(Hugo)는 빠른 속도와 강력한 기능으로 많은 사랑을 받고 있습니다. 특히 마크다운으로 콘텐츠를 작성하고, 다양한 테마를 적용하여 손쉽게 자신만의 블로그나 웹사이트를 만들 수 있다는 점이 큰 매력입니다.</p>
+<p>수많은 휴고 테마 중에서도 <strong>Hextra</strong>는 깔끔한 디자인과 뛰어난 기능성으로 최근 많은 주목을 받고 있습니다. 오늘은 휴고에 Hextra 테마를 적용하는 가장 간단하고 확실한 방법을 알아보겠습니다.</p>
+<h2>Hextra 테마, 왜 좋은 선택일까요?<span class="hx:absolute hx:-mt-20" id="hextra-테마-왜-좋은-선택일까요"></span>
+    <a href="#hextra-%ed%85%8c%eb%a7%88-%ec%99%9c-%ec%a2%8b%ec%9d%80-%ec%84%a0%ed%83%9d%ec%9d%bc%ea%b9%8c%ec%9a%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Hextra 테마는 다음과 같은 장점을 가지고 있어 많은 개발자들에게 좋은 평가를 받고 있습니다.</p>
+<ul>
+<li><strong>모던하고 깔끔한 디자인:</strong> 콘텐츠에 집중할 수 있는 미니멀한 디자인을 제공합니다.</li>
+<li><strong>다크 모드 지원:</strong> 사용자의 시스템 설정에 따라 자동으로 다크 모드를 지원하여 눈의 피로를 덜어줍니다.</li>
+<li><strong>강력한 검색 기능:</strong> 내장된 FlexSearch를 통해 빠르고 정확한 전체 텍스트 검색 기능을 제공합니다.</li>
+<li><strong>다양한 컴포넌트:</strong> 경고, 탭, 카드 등 다양한 UI 컴포넌트를 기본적으로 지원하여 콘텐츠를 다채롭게 꾸밀 수 있습니다.</li>
+<li><strong>쉬운 설치와 설정:</strong> 휴고 모듈(Hugo Modules)을 지원하여 몇 가지 명령어만으로 간단하게 설치하고 업데이트할 수 있습니다.</li>
+</ul>
+<p><img src="https://themes.gohugo.io/themes/hextra/screenshot_hu_2aa2870225a644fe.webp" alt=""  loading="lazy" /></p>
+<h2>Hextra 테마 적용 따라하기<span class="hx:absolute hx:-mt-20" id="hextra-테마-적용-따라하기"></span>
+    <a href="#hextra-%ed%85%8c%eb%a7%88-%ec%a0%81%ec%9a%a9-%eb%94%b0%eb%9d%bc%ed%95%98%ea%b8%b0" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>이제 본격적으로 여러분의 휴고 사이트에 Hextra 테마를 적용해 보겠습니다. 터미널(Terminal) 또는 명령 프롬프트(Command Prompt) 창을 열고 차근차근 따라오세요.</p>
+<p><strong>사전 준비:</strong></p>
+<ul>
+<li><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>가 설치되어 있어야 합니다.</li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>이 설치되어 있어야 합니다.</li>
+</ul>
+<h4><strong>1단계: 새로운 휴고 사이트 생성</strong><span class="hx:absolute hx:-mt-20" id="1단계-새로운-휴고-사이트-생성"></span>
+    <a href="#1%eb%8b%a8%ea%b3%84-%ec%83%88%eb%a1%9c%ec%9a%b4-%ed%9c%b4%ea%b3%a0-%ec%82%ac%ec%9d%b4%ed%8a%b8-%ec%83%9d%ec%84%b1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>먼저, Hextra 테마를 적용할 새로운 휴고 사이트를 생성합니다. 이미 기존에 운영하던 사이트가 있다면 이 단계는 건너뛰어도 좋습니다.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-hextra-site
+</span></span><span style="display:flex;"><span>cd my-hextra-site</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+    <div class="success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>위 명령어는 <code>my-hextra-site</code>라는 새로운 폴더를 만들고 해당 폴더로 이동하는 명령어입니다.</p>
+<h4><strong>2단계: Git 저장소 초기화</strong><span class="hx:absolute hx:-mt-20" id="2단계-git-저장소-초기화"></span>
+    <a href="#2%eb%8b%a8%ea%b3%84-git-%ec%a0%80%ec%9e%a5%ec%86%8c-%ec%b4%88%ea%b8%b0%ed%99%94" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>휴고 모듈을 사용하기 위해서는 해당 프로젝트 폴더가 Git 저장소로 관리되어야 합니다. 다음 명령어를 실행하여 Git 저장소를 초기화합니다.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+    <div class="success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h4><strong>3단계: 휴고 모듈 초기화 및 테마 추가</strong><span class="hx:absolute hx:-mt-20" id="3단계-휴고-모듈-초기화-및-테마-추가"></span>
+    <a href="#3%eb%8b%a8%ea%b3%84-%ed%9c%b4%ea%b3%a0-%eb%aa%a8%eb%93%88-%ec%b4%88%ea%b8%b0%ed%99%94-%eb%b0%8f-%ed%85%8c%eb%a7%88-%ec%b6%94%ea%b0%80" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>이제 가장 중요한 단계입니다. 휴고 모듈을 초기화하고 Hextra 테마를 프로젝트에 추가합니다.</p>
+<p>기존에는 <code>config.toml</code> 또는 <code>hugo.toml</code> 파일을 직접 수정하고 테마 파일을 다운로드하는 복잡한 과정이 필요했습니다. 하지만 휴고 모듈을 사용하면 이 과정이 매우 간단해집니다.</p>
+<p>다음 명령어를 터미널에 입력하세요.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo mod init github.com/&lt;your_username&gt;/&lt;your_repo&gt;
+</span></span><span style="display:flex;"><span>hugo mod get -u github.com/imfing/hextra</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+    <div class="success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<ul>
+<li><code>hugo mod init ...</code>: 내 프로젝트를 휴고 모듈로 사용하겠다고 선언하는 과정입니다. <code>&lt;your_username&gt;</code>과 <code>&lt;your_repo&gt;</code> 부분은 여러분의 GitHub 사용자 이름과 저장소 이름으로 변경해주세요. (예: <code>github.com/my-id/my-blog</code>)</li>
+<li><code>hugo mod get ...</code>: Hextra 테마를 원격 저장소에서 다운로드하고 필요한 설정을 자동으로 추가하는 명령어입니다. <code>-u</code> 옵션은 최신 버전의 테마를 가져오도록 합니다.</li>
+</ul>
+<h4><strong>4단계: <code>hugo.toml</code> 파일 설정</strong><span class="hx:absolute hx:-mt-20" id="4단계"></span>
+    <a href="#4%eb%8b%a8%ea%b3%84" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>테마를 적용하기 위해 휴고 설정 파일을 수정해야 합니다. 프로젝트의 최상위 경로에 있는 <code>hugo.toml</code> (또는 <code>config.toml</code>) 파일을 열고 <code>theme</code> 설정값을 추가합니다.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://example.org/&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;ko-kr&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;My New Hugo Site&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#39;github.com/imfing/hextra&#39;</span> <span style="color:#75715e"># 이 부분을 추가하거나 수정합니다.</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+    <div class="success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><code>theme</code> 값으로 방금 전 <code>hugo mod get</code> 명령어로 내려받은 테마의 경로(<code>github.com/imfing/hextra</code>)를 정확하게 입력하는 것이 중요합니다.</p>
+<h4><strong>5단계: 로컬 서버 실행 및 확인</strong><span class="hx:absolute hx:-mt-20" id="5단계-로컬-서버-실행-및-확인"></span>
+    <a href="#5%eb%8b%a8%ea%b3%84-%eb%a1%9c%ec%bb%ac-%ec%84%9c%eb%b2%84-%ec%8b%a4%ed%96%89-%eb%b0%8f-%ed%99%95%ec%9d%b8" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>모든 설정이 완료되었습니다. 이제 로컬 서버를 실행하여 Hextra 테마가 잘 적용되었는지 확인해 봅시다.</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+    <div class="success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>[필요한 이미지: <code>hugo server</code> 명령 실행 후 터미널에 나타나는 결과 화면]</p>
+<p>위 명령어를 실행하면 터미널에 <code>Web Server is available at http://localhost:1313/</code> 와 같은 메시지가 나타납니다. 웹 브라우저를 열고 해당 주소(http://localhost:1313)로 접속하면 Hextra 테마가 적용된 여러분의 사이트를 확인할 수 있습니다.</p>
+<p>[필요한 이미지: Hextra 기본 테마가 적용된 로컬 웹사이트 초기 화면 스크린샷]</p>
+<hr>
+<h3>3. 문제 해결 (Troubleshooting)<span class="hx:absolute hx:-mt-20" id="3-문제-해결-troubleshooting"></span>
+    <a href="#3-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0-troubleshooting" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>만약 테마가 정상적으로 적용되지 않는다면 다음 사항을 확인해 보세요.</p>
+<ul>
+<li><strong><code>hugo.toml</code> 파일의 <code>theme</code> 설정:</strong> <code>theme</code> 값에 오타가 없는지, 정확한 테마 경로가 입력되었는지 다시 한번 확인합니다.</li>
+<li><strong>휴고 버전:</strong> Hextra 테마는 최신 버전의 휴고에서 가장 잘 동작합니다. <code>hugo version</code> 명령어로 현재 버전을 확인하고, 필요하다면 최신 버전으로 업데이트하는 것을 권장합니다.</li>
+<li><strong>기존 콘텐츠와의 충돌:</strong> 기존에 다른 테마를 사용하고 있었다면, 이전 테마의 설정이나 콘텐츠의 프론트 매터(Front Matter) 부분이 충돌을 일으킬 수 있습니다. Hextra 테마의 공식 문서를 참고하여 콘텐츠 구조를 확인해 보세요.</li>
+</ul>
+<p><strong>참조:</strong></p>
+<ul>
+<li><strong>Hextra 공식 문서:</strong> <a href="https://imfing.github.io/hextra/" target="_blank" rel="noopener">https://imfing.github.io/hextra/</a></li>
+<li><strong>Hugo Modules 공식 문서:</strong> <a href="https://gohugo.io/hugo-modules/" target="_blank" rel="noopener">https://gohugo.io/hugo-modules/</a></li>
+</ul>
+<hr>
+<p>Hextra 테마는 휴고 모듈을 통해 매우 간단하게 설치하고 관리할 수 있습니다. 오늘 알려드린 방법으로 여러분의 휴고 사이트를 더욱 세련되고 기능적으로 업그레이드해 보시길 바랍니다.</p>
+<p>궁금한 점이 있다면 언제든지 댓글로 질문해주세요.</p>
+
+        </div><div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/blog/develop/env/termux-setup-on-android/"
+        title="안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판)"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>안드로이드, 리눅스 머신으로 변신시키기: Termux 설치와 기본 설정 가이드 (2025년 최신판)</a></div></main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hx:mx-auto hx:flex hx:gap-2 hx:py-2 hx:px-4 hextra-max-footer-width"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle hx:cursor-pointer hx:group hx:h-7 hx:rounded-md hx:px-2 hx:text-left hx:text-xs hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=light]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=dark]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=dark]:hidden">Dark</span></div>
+</button>
+</div><hr class="hx:border-gray-200 hx:dark:border-neutral-800" /><div class="hextra-custom-footer hextra-max-footer-width hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div><div
+      class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start"
+    >
+      <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:font-semibold"><a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by Hextra<svg height=1em class="hx:inline-block hx:ltr:ml-1 hx:rtl:mr-1 hx:align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div></div>
+    </div></footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.js" integrity=""></script>
+  </body>
+</html>
